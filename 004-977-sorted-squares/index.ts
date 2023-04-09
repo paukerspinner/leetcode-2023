@@ -4,13 +4,13 @@ export default function sortedSquares(nums: number[]): number[] {
 
   while (first <= last) {
     if (Math.abs(nums[first]) > Math.abs(nums[last])) {
-      listOfSortedSquares.unshift(nums[first] ** 2)
+      listOfSortedSquares.push(nums[first] ** 2)
       first ++
     } else {
-      listOfSortedSquares.unshift(nums[last] ** 2)
+      listOfSortedSquares.push(nums[last] ** 2)
       last --
     }
   }
 
-  return listOfSortedSquares
+  return listOfSortedSquares.reverse()
 };
